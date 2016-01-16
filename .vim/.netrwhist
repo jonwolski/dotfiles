@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/private/var/www/everyadmin/EveryDollarSupportUtility/lib/tasks'
+let g:netrw_dirhist_2='/Users/jon/tmp/goals'
+let g:netrw_dirhist_3='/Users/jon/development/research/lambda-fizzbuzz'
+let g:netrw_dirhist_4='/Users/jon/tmp'
+let g:netrw_dirhist_5='/Users/jon/development/kata/Balanced'
+let g:netrw_dirhist_6='/Users/jon/.dotfiles/.git'
+let g:netrw_dirhist_7='/Users/jon/.dotfiles/.vim'

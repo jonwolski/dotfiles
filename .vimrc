@@ -64,3 +64,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+call pathogen#infect()
+syntax enable
+filetype plugin indent on
+
