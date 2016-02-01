@@ -1,0 +1,15 @@
+# This is Git's per-user configuration file.
+[core]
+	autocrlf = input
+[credential]
+	helper = osxkeychain
+# check that anything we're getting is complete and sane on a regular basis
+[transfer]
+  fsckobjects = true
+[fetch]
+  fsckobjects = true
+[receive]
+  fsckObjects = true
+[include]
+  path = /Users/jon.wolski/.dotfiles/git/gitconfig.work.inc
+  path = /Users/jon/.dotfiles/git/gitconfig.personal.inc

@@ -1,3 +1,5 @@
 README.md skip
 .ssh recurse
 .ssh/config chmod 0600
+git skip
+
