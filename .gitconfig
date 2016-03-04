@@ -1,6 +1,7 @@
 # This is Git's per-user configuration file.
 [core]
 	autocrlf = input
+	excludesfile = ~/.gitignore_global
 [credential]
 	helper = osxkeychain
 # check that anything we're getting is complete and sane on a regular basis
