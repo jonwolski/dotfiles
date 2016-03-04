@@ -14,3 +14,5 @@
 [include]
   path = /Users/jon.wolski/.dotfiles/git/gitconfig.work.inc
   path = /Users/jon/.dotfiles/git/gitconfig.personal.inc
+[branch]
+	autosetuprebase = always
