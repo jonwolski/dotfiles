@@ -1,6 +1,7 @@
 # include what you want
 
 export EDITOR=vi
+export ANSIBLE_HOSTS=/usr/local/etc/ansible/hosts
 
 export PATH=$PATH:$HOME/bin
 export PATH="/usr/local/sbin:$PATH"
