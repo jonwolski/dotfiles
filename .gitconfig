@@ -17,3 +17,5 @@
   path = /home/jon/.dotfiles/git/gitconfig.personal.inc
 [branch]
 	autosetuprebase = always
+[push]
+	default = simple
