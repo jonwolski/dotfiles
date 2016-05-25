@@ -25,11 +25,12 @@ windows:
   - servers:
       layout: tiled
       panes:
+        - ssh srv1
+        - ssh srv2
+        - ssh srv3
+        - ssh srv4
+        - ssh srv5
+        - ssh srv6
+        - ssh srv7
+        - ssh hub1
         - ssh app1
-        - ssh app2
-        - ssh app3
-        - ssh app4
-        - ssh app5
-        - ssh app6
-        - ssh app7
-        - ssh app8
