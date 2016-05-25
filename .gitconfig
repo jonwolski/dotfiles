@@ -19,3 +19,5 @@
 	autosetuprebase = always
 [push]
 	default = simple
+[init]
+	templatedir = ~/.dotfiles/git/template/
