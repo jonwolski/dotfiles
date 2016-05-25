@@ -1,0 +1,50 @@
+# ~/.tmuxinator/workspace.yml
+
+name: workspace
+root: ~/workspace
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+startup_window: proposal_srv
+
+windows:
+  - proposal_srv:
+      layout: tiled
+      root: ~/workspace/proposal_service
+      panes:
+        - tail -fn0 log/*.log
+        - clear
+        - bundle exec guard
+        - clear
+  - gs_srv:
+      layout: tiled
+      root: ~/workspace/groupsync_service
+      panes:
+        - clear
+  - property_srv:
+      layout: tiled
+      root: ~/workspace/property_service
+      panes:
+        - clear
+  - infrastructure:
+      layout: tiled
+      root: ~/workspace/infrastructure
+      panes:
+        - clear
+
