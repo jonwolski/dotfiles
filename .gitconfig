@@ -21,3 +21,5 @@
 	default = simple
 [init]
 	templatedir = ~/.dotfiles/git/template/
+[rebase]
+	autosquash = true
