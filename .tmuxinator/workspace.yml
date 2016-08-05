@@ -24,10 +24,15 @@ root: ~/workspace
 startup_window: proposal_srv
 
 windows:
+  - today:
+      layout: tiled
+      root: ~
+      panes:
+        - vim ~/today.txt
   - proposal_srv:
       layout: tiled
       root: ~/workspace/proposal_service
-      panes:
+      panes: &srvdev
         - tail -fn0 log/*.log
         - clear
         - bundle exec guard
@@ -35,13 +40,15 @@ windows:
   - gs_srv:
       layout: tiled
       root: ~/workspace/groupsync_service
-      panes:
-        - clear
+      panes: *srvdev
   - property_srv:
       layout: tiled
       root: ~/workspace/property_service
-      panes:
-        - clear
+      panes: *srvdev
+  - market_srv:
+      layout: tiled
+      root: ~/workspace/market_service
+      panes: *srvdev
   - infrastructure:
       layout: tiled
       root: ~/workspace/infrastructure
