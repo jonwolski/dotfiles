@@ -23,3 +23,6 @@
 	templatedir = ~/.dotfiles/git/template/
 [rebase]
 	autosquash = true
+[alias]
+	annotate = blame
+	ann = blame
