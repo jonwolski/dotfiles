@@ -69,3 +69,4 @@ call pathogen#infect()
 syntax enable
 filetype plugin indent on
 
+set runtimepath^=~/.vim/bundle/ctrlp.vim
