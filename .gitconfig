@@ -26,3 +26,5 @@
 [alias]
 	annotate = blame
 	ann = blame
+[commit]
+	gpgsign = true
