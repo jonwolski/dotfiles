@@ -12,25 +12,3 @@ if [ "$CODE" != "0" ]; then
     echo "COMMIT ABORTED: Conflict markers found." >&2
     exit $CODE
 fi
-
-# Pyflakes
-TMPDIR=`mktemp -d`
-TMPFILE=`mktemp`
-git diff --cached --name-only --diff-filter=ACMR | xargs git checkout-index --prefix=$TMPDIR/ --
-pyflakes $TMPDIR >$TMPFILE 2>&1
-grep -v "unable to detect undefined names" $TMPFILE >$TMPFILE.2
-egrep -v "migrations.*'(datetime|models)' imported but unused" $TMPFILE.2 >$TMPFILE
-
-# PDB breakpoints
-grep -rn "pdb.set_trace" $TMPDIR >>$TMPFILE
-sed "s/^${TMPDIR//\//.}.//" $TMPFILE >$TMPFILE.2
-mv $TMPFILE.2 $TMPFILE
-CODE=0
-OUTPUT=`cat $TMPFILE`
-if [ -n "$OUTPUT" ]; then
-    cat $TMPFILE >&2
-    echo "COMMIT ABORTED: Python programming errors detected." >&2
-    CODE=1
-fi
-rm -Rf $TMPDIR $TMPFILE
-exit $CODE
