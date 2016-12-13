@@ -29,18 +29,14 @@ windows:
       root: ~
       panes:
         - vim ~/today.txt
-  - proposal_srv:
+  - identity_srv:
       layout: tiled
-      root: ~/workspace/proposal_service
+      root: ~/workspace/identity_service
       panes: &srvdev
         - tail -fn0 log/*.log
         - clear
         - bundle exec guard
         - clear
-  - gs_srv:
-      layout: tiled
-      root: ~/workspace/groupsync_service
-      panes: *srvdev
   - property_srv:
       layout: tiled
       root: ~/workspace/property_service
@@ -49,9 +45,22 @@ windows:
       layout: tiled
       root: ~/workspace/market_service
       panes: *srvdev
+  - gs_srv:
+      layout: tiled
+      root: ~/workspace/groupsync_service
+      panes:
+        - clear
   - infrastructure:
       layout: tiled
       root: ~/workspace/infrastructure
       panes:
         - clear
-
+  - go_srv:
+      layout: tiled
+      root: ~/workspace/grouponomics_service
+      panes:
+        - clear
+  - proposal_srv:
+      layout: tiled
+      root: ~/workspace/proposal_service
+      panes: *srvdev
