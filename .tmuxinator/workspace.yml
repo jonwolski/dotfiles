@@ -28,7 +28,7 @@ windows:
       layout: tiled
       root: ~
       panes:
-        - vim ~/today.txt
+        - vim ~/today.md
   - identity_srv:
       layout: tiled
       root: ~/workspace/identity_service
