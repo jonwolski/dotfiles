@@ -14,9 +14,12 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH="/usr/local/opt/gnupg/libexec/gpgbin:$PATH"
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-   source `brew --prefix`/etc/bash_completion
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  if [ -f `brew --prefix`/etc/bash_completion ]; then
+     source `brew --prefix`/etc/bash_completion
+  fi
 fi
+
 source ~/.bash_completions.d/*
 
 if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
