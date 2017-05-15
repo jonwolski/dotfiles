@@ -1,0 +1,66 @@
+# ~/.tmuxinator/workspace.yml
+
+name: etl
+root: ~/workspace
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+startup_window: etl
+
+windows:
+  - today:
+      layout: tiled
+      root: ~
+      panes:
+        - vim ~/today.md
+  - etl:
+      layout: tiled
+      root: ~/workspace/etl
+      panes:
+        - clear
+        - export $(cat scripts/peppermill.env )
+        - clear
+        - clear
+  - go_srv:
+      layout: tiled
+      root: ~/workspace/grouponomics_service
+      panes:
+        - tail -fn0 log/*.log
+        - clear
+        - bin/rails s -p 3070
+        - clear
+  - event_srv:
+      layout: tiled
+      root: ~/workspace/event_service
+      panes:
+        - tail -fn0 log/*.log
+        - clear
+        - bin/rails s -p 3080
+        - clear
+  - gsa:
+      layout: tiled
+      root: ~/workspace/grouponomics
+      panes:
+        - npm run start
+  - es:
+      root: /Users/jonwolski/Downloads/elasticsearch-1.5.2
+      panes:
+        - bin/elasticsearch
+
+
