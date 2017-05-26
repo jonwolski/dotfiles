@@ -14,9 +14,6 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH="/usr/local/opt/gnupg/libexec/gpgbin:$PATH"
 
-ssh-add -K ~/.ssh/groups360_rsa
-ssh-add -K ~/.ssh/github_4096_rsa
-
 if [[ "$OSTYPE" == "darwin"* ]]; then
   if [ -f `brew --prefix`/etc/bash_completion ]; then
      source `brew --prefix`/etc/bash_completion
