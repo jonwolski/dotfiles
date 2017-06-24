@@ -1,0 +1,47 @@
+# ~/.tmuxinator/local_apps.yml
+
+name: local_apps
+root: ~/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+windows:
+  - node-based:
+      layout: tiled
+      panes:
+        - cd ~/workspace/admin
+        - cd ~/workspace/analytics
+        - cd ~/workspace/grouponomics
+        - cd ~/workspace/groupsync
+        - cd ~/workspace/groupsync-ng2
+        - cd ~/workspace/housing
+        - cd ~/workspace/pdf_proxy
+  - rails-based:
+      layout: tiled
+      panes:
+        - cd ~/workspace/audit_service
+        - cd ~/workspace/etl
+        - cd ~/workspace/event_service
+        - cd ~/workspace/grouponomics_service
+        - cd ~/workspace/groupsync_service
+        - cd ~/workspace/identity_service
+        - cd ~/workspace/market_service
+        - cd ~/workspace/property_service
+        - cd ~/workspace/proposal_service
+        - cd ~/workspace/salesforce_service
