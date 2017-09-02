@@ -20,6 +20,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   fi
 fi
 
-source ~/.bash_completions.d/*
+find ~/.bash_completions.d/ -type f -execdir sh -c 'source  \{}' \;
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
