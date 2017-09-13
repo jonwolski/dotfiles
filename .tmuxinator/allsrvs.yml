@@ -34,6 +34,8 @@ windows:
         - cd groupsync_service
         - cd identity_service
         - cd market_service
+        - cd promotion_service
         - cd property_service
         - cd proposal_service
         - cd salesforce_service
+        - cd vendor_service
