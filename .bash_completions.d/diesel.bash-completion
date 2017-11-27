@@ -449,7 +449,7 @@ _diesel() {
             return 0
             ;;
         diesel__print__schema)
-            opts=" -w -b -h -V -s  --whitelist --blacklist --help --version --schema --database-url  <table-name>... "
+            opts=" -w -b -h -V -s  --whitelist --blacklist --with-docs --help --version --schema --database-url  <table-name>... "
             if [[ ${cur} == -* || ${COMP_CWORD} -eq 2 ]] ; then
                 COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
                 return 0
