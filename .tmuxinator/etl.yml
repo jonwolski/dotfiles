@@ -34,7 +34,7 @@ windows:
       root: ~/workspace/etl
       panes:
         - clear
-        - export $(cat scripts/peppermill.env )
+        - export $(cat scripts/pacifichospitality.env | rg -v ^#)
         - clear
         - clear
   - go_srv:
@@ -58,9 +58,3 @@ windows:
       root: ~/workspace/grouponomics
       panes:
         - npm run start
-  - es:
-      root: /Users/jonwolski/Downloads/elasticsearch-1.5.2
-      panes:
-        - bin/elasticsearch
-
-
