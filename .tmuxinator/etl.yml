@@ -34,7 +34,7 @@ windows:
       root: ~/workspace/etl
       panes:
         - clear
-        - export $(cat scripts/pacifichospitality.env | rg -v ^#)
+        - clear
         - clear
         - clear
   - go_srv:

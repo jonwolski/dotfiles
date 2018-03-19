@@ -34,3 +34,7 @@ windows:
         - ssh srv7
         - ssh hub1
         - ssh app1
+        - ssh srv10
+        - ssh srv11
+        - ssh batch
+
