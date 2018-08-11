@@ -21,7 +21,7 @@ root: ~/workspace
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
 # startup_window: logs
 
-startup_window: proposal_srv
+startup_window: api
 
 windows:
   - today:
@@ -29,38 +29,18 @@ windows:
       root: ~
       panes:
         - vim ~/today.md
-  - identity_srv:
+  - api:
       layout: tiled
-      root: ~/workspace/identity_service
-      panes: &srvdev
-        - tail -fn0 log/*.log
-        - clear
-        - bundle exec guard
-        - clear
-  - property_srv:
-      layout: tiled
-      root: ~/workspace/property_service
-      panes: *srvdev
-  - market_srv:
-      layout: tiled
-      root: ~/workspace/market_service
-      panes: *srvdev
-  - gs_srv:
-      layout: tiled
-      root: ~/workspace/groupsync_service
+      root: ~/workspace/isp-app-backend
       panes:
         - clear
-  - infrastructure:
+  - ui:
       layout: tiled
-      root: ~/workspace/infrastructure
+      root: ~/workspace/isp-app-ui
       panes:
         - clear
-  - go_srv:
+  - graphql:
       layout: tiled
-      root: ~/workspace/grouponomics_service
+      root: ~/workspace/isp-graphql-api
       panes:
         - clear
-  - proposal_srv:
-      layout: tiled
-      root: ~/workspace/proposal_service
-      panes: *srvdev

@@ -1,4 +1,6 @@
 [user]
-	name = Jon Wolski
-	email = jon.wolski@groups360.com
-	signingkey = BBD357AC556B87B3B54CEDFCD00C636D36E88358
+	name = Jonathan K. Wolski
+	email = jonathan.k.wolski@disney.com
+	signingkey = 5D838D53E7EBA99E1022C388645D9FBC709984B5
+[alias]
+  ci = duet-commit

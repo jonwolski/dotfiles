@@ -12,7 +12,8 @@
 [receive]
   fsckObjects = true
 [include]
-  path = /Users/jonwolski/.dotfiles/git/gitconfig.work.inc
+  path = ~/.dotfiles/git/aliases.inc
+  path = /Users/wolsj006/.dotfiles/git/gitconfig.work.inc
   path = /Users/jon/.dotfiles/git/gitconfig.personal.inc
   path = /home/jon/.dotfiles/git/gitconfig.personal.inc
 [branch]
