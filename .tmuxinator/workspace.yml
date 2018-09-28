@@ -31,16 +31,11 @@ windows:
         - vim ~/today.md
   - api:
       layout: tiled
-      root: ~/workspace/isp-app-backend
+      root: ~/workspace/clo-api
       panes:
         - clear
-  - ui:
+  - openshift:
       layout: tiled
-      root: ~/workspace/isp-app-ui
-      panes:
-        - clear
-  - graphql:
-      layout: tiled
-      root: ~/workspace/isp-graphql-api
+      root: ~/workspace/openshift-objects
       panes:
         - clear
