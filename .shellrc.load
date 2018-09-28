@@ -23,7 +23,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   fi
 fi
 
-find ~/.bash_completions.d/ -type f -execdir sh -c 'source  \{}' \;
+for filename in ~/.bash_completions.d/*; do
+  source $filename;
+done
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
