@@ -27,6 +27,7 @@
 [alias]
 	annotate = blame
 	ann = blame
+	serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
 [commit]
 	gpgsign = true
 [filter "lfs"]
