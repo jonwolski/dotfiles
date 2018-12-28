@@ -29,7 +29,12 @@ windows:
       root: ~
       panes:
         - vim ~/today.md
-  - api:
+  - prodm:
+      layout: tiled
+      root: ~/workspace/product-master
+      panes:
+        - clear
+  - clo:
       layout: tiled
       root: ~/workspace/clo-api
       panes:
