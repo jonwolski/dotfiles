@@ -33,3 +33,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 alias todo='rg -t markdown -F " - [ ]" ~/notes/ ~/today.md'
+alias aws-brokers='aws kafka list-clusters --region us-east-1 | jq -r .ClusterInfoList[].ClusterArn | xargs -n1 -t aws kafka get-bootstrap-brokers --region us-east-1 --cluster-arn'
