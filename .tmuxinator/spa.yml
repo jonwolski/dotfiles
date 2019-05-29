@@ -34,6 +34,11 @@ windows:
       root: ~/workspace/spa-message-distributor
       panes:
         - clear
+  - r2o:
+      layout: tiled
+      root: ~/workspace/dmd-rights-to-order
+      panes:
+        - clear
   - test-harness:
       layout: tiled
       root: ~/workspace/spa-message-distributor
