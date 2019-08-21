@@ -21,6 +21,11 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   if [ -f `brew --prefix`/etc/bash_completion ]; then
      source `brew --prefix`/etc/bash_completion
   fi
+  if [ -d `brew --prefix`/etc/bash_completion.d/ ]; then
+    for filename in `brew --prefix`/etc/bash_completion.d/* ; do
+      source $filename;
+    done
+  fi
 fi
 
 for filename in ~/.bash_completions.d/*; do
