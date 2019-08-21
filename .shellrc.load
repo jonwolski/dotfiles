@@ -43,3 +43,8 @@ alias aws-brokers='aws kafka list-clusters --region us-east-1 | jq -r .ClusterIn
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# asdf version manager
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  source "$(brew --prefix asdf)/asdf.sh"
+fi
