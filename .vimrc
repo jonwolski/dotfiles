@@ -27,8 +27,6 @@ if has("autocmd")
 au FileType cpp,c,java,sh,pl,php set cindent
 au BufRead *.py set cinwords=if,elif,else,for,while,try,except,finally,def,class
 au BufRead *.rb set cinwords=if,elsif,else,unless,for,while,begin,rescue,def,class,module
-"au BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-"au BufRead *.rb set smartindent cinwords=if,elsif,else,unless,for,while,begin,rescue,def,class,module
 endif
 
 "Spell check for prose file types
