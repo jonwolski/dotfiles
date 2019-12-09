@@ -31,6 +31,10 @@ au BufRead *.rb set cinwords=if,elsif,else,unless,for,while,begin,rescue,def,cla
 "au BufRead *.rb set smartindent cinwords=if,elsif,else,unless,for,while,begin,rescue,def,class,module
 endif
 
+"Spell check for prose file types
+autocmd FileType markdown setlocal spell
+autocmd FileType gitcommit setlocal spell
+
 syntax on
 "set background=dark
 "hi Normal ctermfg=grey ctermbg=darkgrey
