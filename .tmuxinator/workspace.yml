@@ -29,18 +29,13 @@ windows:
       root: ~
       panes:
         - vim ~/today.md
-  - prodm:
-      layout: tiled
-      root: ~/workspace/product-master
+  - docs:
+      layoue: tiled
+      root: ~/workspace/vibranium/docs
       panes:
         - clear
-  - clo:
+  - studio-platform:
       layout: tiled
-      root: ~/workspace/clo-api
-      panes:
-        - clear
-  - openshift:
-      layout: tiled
-      root: ~/workspace/openshift-objects
+      root: ~/workspace/studio-platform/vault-configs
       panes:
         - clear
