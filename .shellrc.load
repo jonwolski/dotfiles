@@ -49,6 +49,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 #  source "$(brew --prefix asdf)/asdf.sh"
 #fi
 
-eval "$(direnv hook bash)"
-
+if [[ $(which direnv) ]]; then
+  eval "$(direnv hook bash)"
+fi
 
