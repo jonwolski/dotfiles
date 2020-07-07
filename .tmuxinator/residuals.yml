@@ -1,0 +1,58 @@
+# ~/.tmuxinator/residuals.yml
+
+name: residuals
+root: ~/workspace/residuals
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+startup_window: today
+
+windows:
+  - today:
+      layout: tiled
+      root: ~/notes
+      panes:
+        - vim ~/today.md
+        - todo
+  - api:
+      layoue: tiled
+      root: ~/workspace/residuals/residuals-api
+      panes:
+        - clear
+  - db:
+      layout: tiled
+      root: ~/workspace/residuals/
+      panes:
+        - docker logs -f residuals-api-db
+## When I want to edit all the Jenkinsfiles
+#  - jenkins:
+#      layout: tiled
+#      root: ~/workspace/residuals
+#      panes:
+#        - cd rerun2-tid && vi pipeline/Jenkinsfile
+#        - cd residuals-obligations-calc && vi pipelines/Jenkinsfile
+#        - cd rerun2-user-auth && vi pipelines/Jenkinsfile
+#        - cd rerun2-filecopy && vi pipeline/Jenkinsfile
+#        - cd residuals-api && vi pipelines/Jenkinsfile
+#        - cd residuals-web-ui && vi pipelines/Jenkinsfile
+#        - cd residuals-data && vi pipelines/Jenkinsfile
+#        - cd rerun2-template && vi pipelines/Jenkinsfile
+#        - cd residuals-reports-calc && vi pipelines/Jenkinsfile
+#        - cd residuals-reports-calc && vi pipelines/residuals-reports/Jenkinsfile
+#        - cd residuals-reports-calc && vi pipelines/residuals-recalc/Jenkinsfile
