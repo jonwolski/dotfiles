@@ -41,8 +41,8 @@ alias todo='rg -t markdown -F " - [ ]" ~/notes/ ~/today.md'
 alias aws-brokers='aws kafka list-clusters --region us-east-1 | jq -r .ClusterInfoList[].ClusterArn | xargs -n1 -t aws kafka get-bootstrap-brokers --region us-east-1 --cluster-arn'
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# export SDKMAN_DIR="$HOME/.sdkman"
+# [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # asdf version manager
 #if [[ "$OSTYPE" == "darwin"* ]] && [[ -z "$ASDF_DIR" ]]; then
