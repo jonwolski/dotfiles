@@ -3,29 +3,11 @@
 name: residuals
 root: ~/workspace/residuals
 
-# Optional tmux socket
-# socket_name: foo
-
-# Runs before everything. Use it to start daemons etc.
-# pre: sudo /etc/rc.d/mysqld start
-
-# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-# pre_window: rbenv shell 2.0.0-p247
-
-# Pass command line options to tmux. Useful for specifying a different tmux.conf.
-# tmux_options: -f ~/.tmux.mac.conf
-
-# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
-# tmux_command: byobu
-
-# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
-# startup_window: logs
-
 startup_window: today
 
 windows:
   - today:
-      layout: tiled
+      layout: even-horizontal
       root: ~/notes
       panes:
         - vim ~/today.md
@@ -36,10 +18,17 @@ windows:
       panes:
         - clear
   - db:
-      layout: tiled
-      root: ~/workspace/residuals/
+      layout: even-horizontal
+      root: ~/workspace/residuals/residuals-api
       panes:
-        - docker logs -f residuals-api-db
+        - 'nc -zv localhost 5432 || docker start residuals-api-db'
+        - sleep 5 && docker logs -f residuals-api-db
+  - rat:
+      layout: even-horizontal
+      root: ~/workspace/residuals/residuals-acceptance-tests
+      panes:
+        - 'vi -R READEME.md'
+        - clear
 ## When I want to edit all the Jenkinsfiles
 #  - jenkins:
 #      layout: tiled
