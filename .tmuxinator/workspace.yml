@@ -29,13 +29,3 @@ windows:
       root: ~
       panes:
         - vim ~/today.md
-  - docs:
-      layoue: tiled
-      root: ~/workspace/vibranium/docs
-      panes:
-        - clear
-  - studio-platform:
-      layout: tiled
-      root: ~/workspace/studio-platform/vault-configs
-      panes:
-        - clear
