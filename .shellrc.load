@@ -5,6 +5,7 @@
 ####
 # put any bash/zsh customizations in here
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
 export EDITOR=vi
 export ANSIBLE_HOSTS=/usr/local/etc/ansible/hosts
 export PS1='\u@\h \W $ '
