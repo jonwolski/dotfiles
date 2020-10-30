@@ -1,0 +1,3 @@
+# Tests especially in Java
+--type-add
+test:*{Test,IT}.*
