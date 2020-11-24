@@ -41,6 +41,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 alias todo='rg -t markdown -F " - [ ]" ~/notes/ ~/today.md'
 alias aws-brokers='aws kafka list-clusters --region us-east-1 | jq -r .ClusterInfoList[].ClusterArn | xargs -n1 -t aws kafka get-bootstrap-brokers --region us-east-1 --cluster-arn'
+alias :q='exit' # I frequently type this when I mean to exit a terminal. This alias will make it work
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 # export SDKMAN_DIR="$HOME/.sdkman"
