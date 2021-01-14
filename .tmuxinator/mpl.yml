@@ -19,6 +19,6 @@ windows:
         - clear
   - smash:
       layout: tiled
-      root: ~/workspace/ms-tools/deploy-tools/smash/
+      root: ~/workspace/mpl/ms-tools/deploy-tools/smash/smash-cli
       panes:
         - clear
