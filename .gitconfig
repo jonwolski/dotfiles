@@ -29,6 +29,9 @@
 	annotate = blame
 	ann = blame
 	serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
+  # this can be removed once everything is on git 2.28
+  # cf. https://www.hanselman.com/blog/easily-rename-your-git-default-branch-from-master-to-main
+	new = !git init && git symbolic-ref HEAD refs/heads/main
 [commit]
 	gpgsign = true
 [filter "lfs"]
