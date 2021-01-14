@@ -48,9 +48,9 @@ alias :q='exit' # I frequently type this when I mean to exit a terminal. This al
 # [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # asdf version manager
-#if [[ "$OSTYPE" == "darwin"* ]] && [[ -z "$ASDF_DIR" ]]; then
-#  source "$(brew --prefix asdf)/asdf.sh"
-#fi
+if [[ "$OSTYPE" == "darwin"* ]] && [[ -z "$ASDF_DIR" ]]; then
+  source "/usr/local/opt/asdf/asdf.sh"
+fi
 
 if [[ $(which direnv) ]]; then
   eval "$(direnv hook bash)"
