@@ -1,0 +1,24 @@
+# ~/.tmuxinator/mpl.yml
+
+name: mpl
+root: ~/workspace/mpl
+
+startup_window: today
+
+windows:
+  - today:
+      layout: even-horizontal
+      root: ~/notes
+      panes:
+        - vim ~/today.md
+        - todo
+  - team:
+      layout: tiled
+      root: ~/workspace/mpl/team/
+      panes:
+        - clear
+  - smash:
+      layout: tiled
+      root: ~/workspace/ms-tools/deploy-tools/smash/
+      panes:
+        - clear
