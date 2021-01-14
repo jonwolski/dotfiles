@@ -22,6 +22,7 @@
 	default = simple
 [init]
 	templatedir = ~/.dotfiles/git/template/
+	defaultBranch = main
 [rebase]
 	autosquash = true
 [alias]
