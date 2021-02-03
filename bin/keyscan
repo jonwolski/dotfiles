@@ -1,0 +1,4 @@
+#!
+cat ~/.ssh/known_hosts | grep -v gitlab.disney.com > ~/.ssh/known_hosts.tmp
+dig gitlab.disney.com -tA  | awk '/IN A/ {print $NF " gitlab.disney.com"}'  | ssh-keyscan -f- >> ~/.ssh/known_hosts.tmp
+mv ~/.ssh/known_hosts.tmp ~/.ssh/known_hosts
