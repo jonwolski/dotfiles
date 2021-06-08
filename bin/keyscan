@@ -1,4 +1,3 @@
 #!
-cat ~/.ssh/known_hosts | grep -v gitlab.disney.com > ~/.ssh/known_hosts.tmp
-dig gitlab.disney.com -tA  | awk '/IN A/ {print $NF " gitlab.disney.com"}'  | ssh-keyscan -f- >> ~/.ssh/known_hosts.tmp
-mv ~/.ssh/known_hosts.tmp ~/.ssh/known_hosts
+ssh-keygen -R gitlab.disney.com
+dig gitlab.disney.com -tA  | awk '/IN A/ {print $NF " gitlab.disney.com"}'  | ssh-keyscan -t 'ECDSA' -H -f- >> ~/.ssh/known_hosts
