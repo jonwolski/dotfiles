@@ -1,0 +1,37 @@
+# ~/.tmuxinator/shows.yml
+
+name: shows
+root: ~/workspace/mpl/ms-shows/active-shows
+
+startup_window: shows
+
+windows:
+  - shows:
+      layout: tiled
+      root: ~/workspace/mpl/ms-shows/active-shows
+      panes:
+        - cd AG
+        - cd AP
+        - cd BB
+        - cd BG
+        - cd BS
+        - cd CLO
+        - cd DB
+        - cd EL
+        - cd FAC
+        - cd FR
+        - cd JR
+        - cd LIB
+        - cd MASTERING
+        - cd OF
+        - cd RC
+        - cd SB
+        - cd SC
+        - cd SL
+        - cd SN
+        - cd STEREO
+        - cd SUM
+        - cd SV
+        - cd TEST
+        - cd TT
+        - cd ZP

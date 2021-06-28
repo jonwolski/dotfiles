@@ -22,3 +22,8 @@ windows:
       root: ~/workspace/mpl/ms-tools/deploy-tools/smash/smash-cli
       panes:
         - clear
+  - hg:
+      layout: tiled
+      root: ~/workspace/mpl/ms-tools/plates-lab-tools/quicksilver/quicksilver-webapp
+      panes:
+        - clear
