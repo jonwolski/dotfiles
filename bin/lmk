@@ -1,0 +1,6 @@
+#!/bin/bash
+set -uo pipefail
+
+time "$@"
+echo "completed at $(date +'%Y-%m-%dT%H:%M:%S%z')"
+echo -e "\07"
