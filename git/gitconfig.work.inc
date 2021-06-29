@@ -1,6 +1,6 @@
 [user]
 	name = Jonathan K. Wolski
 	email = jonathan.k.wolski@disney.com
-	signingkey = 9625F3BA41F1343FF83A5E734014C71F3C482B06
+	signingkey = E2C6C1B37BC167FBCE99EE2E2E739784427002C7
 [alias]
   ci = duet-commit
