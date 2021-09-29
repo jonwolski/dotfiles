@@ -3,3 +3,5 @@
 *.swo
 .netrwhist
 .env
+.tool-versions
+__pycache__
