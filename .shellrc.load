@@ -3,9 +3,6 @@
 # . $HOME/.shellrc.load
 
 ####
-# put any bash/zsh customizations in here
-
-export BASH_SILENCE_DEPRECATION_WARNING=1
 export EDITOR=vi
 export ANSIBLE_HOSTS=/usr/local/etc/ansible/hosts
 export PS1='\u@\h \W $ '
@@ -18,22 +15,23 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH="/usr/local/opt/gnupg/libexec/gpgbin:$PATH"
 export RIPGREP_CONFIG_PATH=~/.ripgreprc
+export PGDATABASE=postgres
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  if [ -f `brew --prefix`/etc/bash_completion ]; then
-     source `brew --prefix`/etc/bash_completion
-  fi
-  if [ -d `brew --prefix`/etc/bash_completion.d/ ]; then
-    for filename in `brew --prefix`/etc/bash_completion.d/* ; do
-      source $filename;
-    done
-  fi
-fi
-
-for filename in ~/.bash_completions.d/*; do
-  source $filename;
-done
-
+#if [[ "$OSTYPE" == "darwin"* ]] && [[ "$SHELL" == "bash"]]; then
+#  if [ -f `brew --prefix`/etc/bash_completion ]; then
+#     source `brew --prefix`/etc/bash_completion
+#  fi
+#  if [ -d `brew --prefix`/etc/bash_completion.d/ ]; then
+#    for filename in `brew --prefix`/etc/bash_completion.d/* ; do
+#      source $filename;
+#    done
+#  fi
+#fi
+#
+#for filename in ~/.bash_completions.d/*; do
+#  source $filename;
+#done
+#
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
@@ -50,9 +48,4 @@ alias :q='exit' # I frequently type this when I mean to exit a terminal. This al
 # asdf version manager
 if [[ "$OSTYPE" == "darwin"* ]] && [[ -z "$ASDF_DIR" ]]; then
   source "/usr/local/opt/asdf/asdf.sh"
-fi
-
-if [[ $(which direnv) ]]; then
-  eval "$(direnv hook bash)"
-fi
-
+end
