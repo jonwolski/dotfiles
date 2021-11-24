@@ -42,3 +42,5 @@
 	smudge = git-lfs smudge -- %f
 [tag]
 	gpgSign = true
+[pull]
+	ff = only
