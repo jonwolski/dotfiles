@@ -14,10 +14,11 @@
         sta = stash
         llog = log --date=local
         flog = log --pretty=fuller --decorate
-        blog = log origin/master... --left-right
+        blog = log origin/main... --left-right
         ds = diff --staged
         fixup = commit --fixup
         squash = commit --squash
         unstage = reset HEAD
-        rum = rebase master@{u}
+        rum = rebase main@{u}
         gst = git
+        pushf = push -f --force-with-lease=HEAD
