@@ -12,18 +12,13 @@ windows:
       panes:
         - vim ~/today.md
         - todo
-  - team:
-      layout: tiled
-      root: ~/workspace/mpl/team/
-      panes:
-        - clear
-  - smash:
-      layout: tiled
-      root: ~/workspace/mpl/ms-tools/deploy-tools/smash/smash-cli
-      panes:
-        - clear
   - hg:
       layout: tiled
-      root: ~/workspace/mpl/ms-tools/plates-lab-tools/quicksilver/quicksilver-webapp
+      root: ~/workspace/mpl/ms-tools/plates-lab-tools/quicksilver/
       panes:
-        - clear
+        - cd quicksilver-plate-sort
+        - cd quicksilver-powerbi
+        - cd quicksilver-render
+        - cd quicksilver-transfer
+        - cd quicksilver-webapp
+        - cd submit-to-ppg
