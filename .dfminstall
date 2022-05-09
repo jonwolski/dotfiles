@@ -4,4 +4,4 @@ README.md skip
 .gnupg recurse
 bin recurse
 git skip
-
+.config recurse
