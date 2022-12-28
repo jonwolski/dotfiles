@@ -3,3 +3,4 @@ if status is-interactive
 end
 
 source /usr/local/opt/asdf/libexec/asdf.fish
+alias todo='rg -t markdown -F -- "- [ ]" ~/notes/ ~/today.md'
