@@ -7,6 +7,7 @@ set title                     " Show title in console title bar
 set hid                       " Change buffer without saving
 set showmatch                 " Show matching bracets
 
+set re=2 " use NFA regex implementation
 set ts=2                      " Numbers of spaces of tab character
 set sw=2                      " Numbers of spaces to (auto)indent
 set et                        " Tabs are converted to spaces, use only when required
