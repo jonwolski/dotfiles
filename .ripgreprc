@@ -1,3 +1,6 @@
 # Tests especially in Java
 --type-add
 test:*{Test,IT}.*
+# GitLab CI files
+--type-add
+ci:.gitlab-ci.yml
