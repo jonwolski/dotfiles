@@ -1,3 +1,4 @@
+set expandtab
 set nocompatible              " Use vim defaults
 "set ls=2                      " Always show status line
 set showcmd                   " Show incomplete commands
@@ -10,8 +11,8 @@ set showmatch                 " Show matching bracets
 set re=2 " use NFA regex implementation
 set ts=2                      " Numbers of spaces of tab character
 set sw=2                      " Numbers of spaces to (auto)indent
-set et                        " Tabs are converted to spaces, use only when required
-set sts=2                     " Soft tab stop
+"set et                        " Tabs are converted to spaces, use only when required
+"set sts=2                     " Soft tab stop
 set smartindent               " Smart indent
 set autoindent
 set nocindent
