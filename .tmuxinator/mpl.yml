@@ -10,15 +10,11 @@ windows:
       layout: even-horizontal
       root: ~/notes
       panes:
-        - vim ~/today.md
         - todo
-  - hg:
-      layout: tiled
-      root: ~/workspace/mpl/ms-tools/plates-lab-tools/quicksilver/
+        - vim ~/today.md
+  - jarvis:
+      layout: even-horizontal
+      root: ~/workspace/mps/di-database
       panes:
-        - cd quicksilver-plate-sort
-        - cd quicksilver-powerbi
-        - cd quicksilver-render
-        - cd quicksilver-transfer
-        - cd quicksilver-webapp
-        - cd submit-to-ppg
+        - echo docker compose up --build --force-recreate
+        - vim docker-compose.yml

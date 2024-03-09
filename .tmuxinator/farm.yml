@@ -1,0 +1,77 @@
+# ~/.tmuxinator/farm.yml
+
+name: farm
+root: ~/workspace/mpl
+
+startup_window: farm0
+
+windows:
+  - farm0:
+      layout: tiled
+      panes:
+        - ssh -oBatchMode=no bur-render-vm01
+        - ssh -oBatchMode=no bur-render-vm02
+        - ssh -oBatchMode=no bur-render-vm03
+        - ssh -oBatchMode=no bur-render-vm04
+        - ssh -oBatchMode=no bur-render-vm05
+        - ssh -oBatchMode=no bur-render-vm06
+        - ssh -oBatchMode=no bur-render-vm07
+        - ssh -oBatchMode=no bur-render-vm08
+        - ssh -oBatchMode=no bur-render-vm09
+        - ssh -oBatchMode=no bur-render-vm10
+  - farm1:
+      layout: tiled
+      panes:
+        - ssh -oBatchMode=no bur-render-vm11
+        - ssh -oBatchMode=no bur-render-vm12
+        - ssh -oBatchMode=no bur-render-vm13
+        - ssh -oBatchMode=no bur-render-vm14
+        - ssh -oBatchMode=no bur-render-vm15
+        - ssh -oBatchMode=no bur-render-vm16
+        - ssh -oBatchMode=no bur-render-vm17
+        - ssh -oBatchMode=no bur-render-vm18
+        - ssh -oBatchMode=no bur-render-vm19
+        - ssh -oBatchMode=no bur-render-vm20
+  - farm2:
+      layout: tiled
+      panes:
+        - ssh -oBatchMode=no bur-render-vm21
+        - ssh -oBatchMode=no bur-render-vm22
+        - ssh -oBatchMode=no bur-render-vm23
+        - ssh -oBatchMode=no bur-render-vm24
+        - ssh -oBatchMode=no bur-render-vm25
+        - ssh -oBatchMode=no bur-render-vm26
+        - ssh -oBatchMode=no bur-render-vm27
+        - ssh -oBatchMode=no bur-render-vm28
+        - ssh -oBatchMode=no bur-render-vm29
+        - ssh -oBatchMode=no bur-render-vm30
+  - farm3:
+      layout: tiled
+      panes:
+        - ssh -oBatchMode=no bur-render-vm31
+        - ssh -oBatchMode=no bur-render-vm32
+        - ssh -oBatchMode=no bur-render-vm33
+        - ssh -oBatchMode=no bur-render-vm34
+        - ssh -oBatchMode=no bur-render-vm35
+        - ssh -oBatchMode=no bur-render-vm36
+        - ssh -oBatchMode=no bur-render-vm37
+        - ssh -oBatchMode=no bur-render-vm38
+        - ssh -oBatchMode=no bur-render-vm39
+        - ssh -oBatchMode=no bur-render-vm40
+  - farm3:
+      layout: tiled
+      panes:
+        - ssh -oBatchMode=no bur-render-vm41
+        - ssh -oBatchMode=no bur-render-vm42
+        - ssh -oBatchMode=no atl-render-vm01
+        - ssh -oBatchMode=no atl-render-vm02
+        - ssh -oBatchMode=no atl-render-vm03
+        - ssh -oBatchMode=no atl-render-vm04
+        - ssh -oBatchMode=no lon-render-vm01
+        - ssh -oBatchMode=no lon-render-vm02
+        - ssh -oBatchMode=no lon-render-vm03
+        - ssh -oBatchMode=no lon-render-vm04
+        - ssh -oBatchMode=no syd-render-vm01
+        - ssh -oBatchMode=no syd-render-vm02
+        - ssh -oBatchMode=no syd-render-vm03
+        - ssh -oBatchMode=no syd-render-vm04

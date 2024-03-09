@@ -17,6 +17,7 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH="/usr/local/opt/gnupg/libexec/gpgbin:$PATH"
 export RIPGREP_CONFIG_PATH=~/.ripgreprc
 export PGDATABASE=postgres
+export JAVA_HOME=/Users/Jonathan.K.Wolski/.asdf/installs/java/corretto-17.0.1.12.1
 
 #if [[ "$OSTYPE" == "darwin"* ]] && [[ "$SHELL" == "bash"]]; then
 #  if [ -f `brew --prefix`/etc/bash_completion ]; then
@@ -36,7 +37,7 @@ export PGDATABASE=postgres
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-alias todo='rg -t markdown -F -- "- [ ]" ~/notes/ ~/today.md'
+alias todo='rg -t markdown --sort path -F -- "- [ ]" ~/notes/ ~/today.md'
 alias aws-brokers='aws kafka list-clusters --region us-east-1 | jq -r .ClusterInfoList[].ClusterArn | xargs -n1 -t aws kafka get-bootstrap-brokers --region us-east-1 --cluster-arn'
 alias :q='exit' # I frequently type this when I mean to exit a terminal. This alias will make it work
 
