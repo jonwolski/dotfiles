@@ -12,6 +12,7 @@ windows:
       panes:
         - todo
         - vim ~/today.md
+        - launchctl unload /Library/LaunchAgents/com.jamf.connect.plist
   - jarvis:
       layout: even-horizontal
       root: ~/workspace/mps/di-database
