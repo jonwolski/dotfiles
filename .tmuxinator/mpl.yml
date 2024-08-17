@@ -7,7 +7,7 @@ startup_window: today
 
 windows:
   - today:
-      layout: even-horizontal
+      layout: tiled
       root: ~/notes
       panes:
         - todo
