@@ -22,3 +22,4 @@ if [[ "$OSTYPE" == "darwin"* ]] && [[ -z "$ASDF_DIR" ]]; then
   source "$(brew --prefix asdf)/asdf.sh"
 end
 export PATH=$HOME/.cargo/bin:$PATH
+source ~/.smashplus
