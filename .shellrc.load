@@ -13,6 +13,7 @@ export PATH=$PATH:$HOME/.local/bin
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$(brew --prefix gnupg)/libexec/gpgbin:$PATH"
 export RIPGREP_CONFIG_PATH=~/.ripgreprc
+export BROWSER=firefox
 
 alias todo='rg -t markdown --sort path -F -- "- [ ]" ~/notes/ ~/today.md'
 alias :q='exit' # I frequently type this when I mean to exit a terminal. This alias will make it work

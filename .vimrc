@@ -1,4 +1,5 @@
 set expandtab
+set re=2
 set nocompatible              " Use vim defaults
 "set ls=2                      " Always show status line
 set showcmd                   " Show incomplete commands
@@ -29,6 +30,7 @@ if has("autocmd")
 au FileType cpp,c,java,sh,pl,php set cindent
 au BufRead *.py set cinwords=if,elif,else,for,while,try,except,finally,def,class
 au BufRead *.rb set cinwords=if,elsif,else,unless,for,while,begin,rescue,def,class,module
+au BufNewFile,BufRead *.vtl set ft=velocity
 au! BufNewFile,BufRead *.svelte set ft=html
 endif
 
@@ -80,3 +82,6 @@ if executable('rg')
   let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
   let g:ctrlp_use_caching = 0
 endif
+set tabstop=2
+set shiftwidth=2
+set expandtab
