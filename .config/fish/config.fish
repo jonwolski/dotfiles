@@ -7,6 +7,4 @@ and $brewcmd shellenv | source
 
 source ($brewcmd --prefix asdf)/libexec/asdf.fish
 
-# Setting PATH for Python 3.9
-# The original version is saved in /Users/jonathan.k.wolski/.config/fish/config.fish.pysave
-set -x PATH "/Library/Frameworks/Python.framework/Versions/3.9/bin" "$PATH"
+fish_add_path ~/.local/bin

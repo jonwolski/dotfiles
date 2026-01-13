@@ -5,3 +5,4 @@ README.md skip
 bin recurse
 git skip
 .config recurse
+.claude recurse

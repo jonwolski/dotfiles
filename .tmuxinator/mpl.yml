@@ -13,9 +13,7 @@ windows:
         - todo
         - vim ~/today.md
         - launchctl unload /Library/LaunchAgents/com.jamf.connect.plist
-  - jarvis:
+  - main:
       layout: even-horizontal
-      root: ~/workspace/mps/di-database
       panes:
-        - echo docker compose up --build --force-recreate
-        - vim docker-compose.yml
+        - date
