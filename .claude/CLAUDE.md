@@ -26,3 +26,8 @@
 - Use `uvx` instead of `pipx`. Don't install something _just_ to run it.
 - Use Pydantic for parsing loosely structured data into types - especially at system boundaries (database, request entities, response entities)
 
+# Git and GitLab
+
+- Use the `glab` CLI instead of `curl` commands. `glab` can be allow-listed, but `curl` cannot.
+- For commit messages, follow [conventional commits](https://www.conventionalcommits.org/), because we use [semantic release](https://semantic-release.gitbook.io).
+- Follow [trunk-based development with short-lived feature branches](https://trunkbaseddevelopment.com/short-lived-feature-branches/)
