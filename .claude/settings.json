@@ -4,13 +4,13 @@
     "ANTHROPIC_MODEL": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
     "AWS_PROFILE": "twdc-bedrock-central"
   },
+  "awsAuthRefresh": "aws sso login --profile twdc-bedrock-central",
   "permissions": {
     "allow": [
-      "Glab",
+      "Bash(rg:*)",
       "Bash(grep:*)",
       "Bash(glab:*)",
       "Bash(wc:*)",
-      "Bash(rg:*)",
       "Bash(git status:*)",
       "Bash(git log:*)",
       "Bash(git diff:*)",
@@ -64,10 +64,43 @@
       "Bash(git check-ignore:*)",
       "Bash(git check-attr:*)",
       "Bash(git blame:*)",
-      "Bash(git grep:*)"
+      "Bash(git grep:*)",
+      "Bash(jq:*)",
+      "Bash(uv build:*)",
+      "Bash(uv lock:*)",
+      "Bash(uv run pytest:*)",
+      "Bash(uv sync:*)",
+      "Edit(//Users/jonathan.k.wolski/workspace/**)",
+      "Bash(claude:*)",
+      "Bash(aws configure:*)",
+      "Bash(aws sso:*)",
+      "Bash(aws sso login:*)",
+      "Bash(echo:*)",
+      "Bash(env)",
+      "Bash(cargo build:*)",
+      "Bash(cargo check:*)",
+      "Bash(cargo clippy:*)",
+      "Bash(cargo fmt:*)",
+      "Bash(cargo test:*)",
+      "Bash(cargo bench:*)",
+      "Bash(cargo add:*)",
+      "Bash(cargo remove:*)",
+      "Bash(cargo update:*)",
+      "Bash(cargo tree:*)",
+      "Bash(cargo fetch:*)",
+      "Bash(cargo search:*)",
+      "Bash(cargo doc:*)",
+      "Bash(cargo metadata:*)",
+      "Bash(cargo clean:*)",
+      "Bash(cargo verify-project:*)",
+      "Bash(cargo locate-project:*)",
+      "Bash(cargo pkgid:*)",
+      "Bash(cargo run:*)"
     ]
   },
+  "model": "us.anthropic.claude-opus-4-6-v1",
   "enabledPlugins": {
-    "rust-analyzer-lsp@claude-plugins-official": true
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true
   }
 }
