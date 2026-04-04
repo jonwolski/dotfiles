@@ -31,3 +31,8 @@
 - Use the `glab` CLI instead of `curl` commands. `glab` can be allow-listed, but `curl` cannot.
 - For commit messages, follow [conventional commits](https://www.conventionalcommits.org/), because we use [semantic release](https://semantic-release.gitbook.io).
 - Follow [trunk-based development with short-lived feature branches](https://trunkbaseddevelopment.com/short-lived-feature-branches/)
+
+# Confidence
+
+Do not make any changes until you have 95% confidence in what you need to build. Ask me follow-up questions until you reach that confidence.
+
