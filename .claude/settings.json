@@ -1,10 +1,4 @@
 {
-  "env": {
-    "CLAUDE_CODE_USE_BEDROCK": "1",
-    "ANTHROPIC_MODEL": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
-    "AWS_PROFILE": "twdc-bedrock-central"
-  },
-  "awsAuthRefresh": "aws sso login --profile twdc-bedrock-central",
   "permissions": {
     "allow": [
       "Bash(rg:*)",
