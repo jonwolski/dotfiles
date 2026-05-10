@@ -1,4 +1,4 @@
 [user]
 	name = Jon Wolski
 	email = jonwolski@gmail.com
-	signingkey = 3D166BEDFFCA092AFDDFB564F3371907EC3B24F8
+	signingkey = 6F3E8E0BDAF91AD604A0901A1387E33175382355
