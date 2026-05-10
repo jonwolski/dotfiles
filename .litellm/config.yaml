@@ -1,0 +1,60 @@
+litellm_settings:
+  master_key: ollama
+  telemetry: false         # Disables LiteLLM usage tracking
+  general_settings:
+    disable_key_check: true
+  drop_params: true        # Strips Anthropic-only beta headers/params
+  disable_device_id: true  # Prevents sending unique hardware IDs
+
+
+.base_ollama: &ollama_base
+  api_base: http://localhost:11434
+  keep_alive: 10m # Keep models loaded for 10 minutes
+  api_key: ollama
+  initial_prompt_value: "Respond in plain text unless a tool call is required."
+
+model_list:
+  # Map Claude 4.6 Sonnet to Qwen 3.5 (Best 8GB Fit)
+  - model_name: claude-3-5-sonnet-20241022
+    litellm_params:
+      <<: *ollama_base
+      model: ollama_chat/qwen3.5:9b
+
+  - model_name: claude-sonnet-4-6
+    litellm_params:
+      <<: *ollama_base
+      model: ollama_chat/qwen3.5:9b
+
+  # Map Claude 4.6 Opus to Qwen 3-Coder (Best for your 48GB GPU)
+  - model_name: claude-3-opus-20240229
+    litellm_params:
+      <<: *ollama_base
+      model: ollama_chat/qwen3-coder:latest
+
+  - model_name: claude-opus-4-6
+    litellm_params:
+      <<: *ollama_base
+      model: ollama_chat/qwen3-coder:latest
+
+  # Map Claude Haiku to Llama 3.2 (Speed)
+  - model_name: claude-haiku-4-5-20251001
+    litellm_params:
+      <<: *ollama_base
+      model: ollama_chat/llama3.2:3b
+
+  # Add larger models for planning mode
+  - model_name: claude-3-5-sonnet-20241022-planning
+    litellm_params:
+      <<: *ollama_base
+      model: ollama_chat/qwen2.5-coder:32b-instruct-q5_K_M
+
+  - model_name: claude-opus-4-6-planning
+    litellm_params:
+      <<: *ollama_base
+      model: ollama_chat/qwen2.5-coder:32b-instruct-q5_K_M
+
+  # Add your largest model for maximum capability
+  - model_name: claude-3-5-sonnet-20241022-max
+    litellm_params:
+      <<: *ollama_base
+      model: ollama_chat/qwen3-coder:30b
