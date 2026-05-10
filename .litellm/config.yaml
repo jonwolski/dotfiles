@@ -5,6 +5,7 @@ litellm_settings:
     disable_key_check: true
   drop_params: true        # Strips Anthropic-only beta headers/params
   disable_device_id: true  # Prevents sending unique hardware IDs
+  api_base: 0.0.0.0:4000   # Allow remote access
 
 
 .base_ollama: &ollama_base
@@ -36,11 +37,11 @@ model_list:
       <<: *ollama_base
       model: ollama_chat/qwen3-coder:latest
 
-  # Map Claude Haiku to Llama 3.2 (Speed)
+  # Map Claude Haiku to Qwen 3-Coder (better performance with your 48GB GPU)
   - model_name: claude-haiku-4-5-20251001
     litellm_params:
       <<: *ollama_base
-      model: ollama_chat/llama3.2:3b
+      model: ollama_chat/qwen3-coder:latest
 
   # Add larger models for planning mode
   - model_name: claude-3-5-sonnet-20241022-planning

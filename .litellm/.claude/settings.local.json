@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(nvidia-smi *)",
+      "Bash(ollama list *)",
+      "Bash(pkill *)",
+      "Bash(kill 70571 *)",
+      "WebSearch",
+      "Bash(ollama show *)",
+      "Bash(netstat -tulnp)"
+    ]
+  }
+}
